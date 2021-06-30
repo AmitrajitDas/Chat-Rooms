@@ -34,7 +34,20 @@ io.on('connect', (socket) => {
 
         if(error) return callback(error)
 
+        socket.emit('message', { user: admin, text: `Hey ${user.username}, welcome to ${user.room}`})
+        socket.broadcast.to(user.room).emit('message', { user: admin, text: `{user.username} has joined!`})
+
         socket.join(user.room)
+
+        return callback()
+    })
+
+    socket.on('sendMessage', () => {
+        const user = getUser(socket.id)
+
+        io.to(user.room).emit('message', { user: user.username, text: message})
+
+        callback()
     })
 
     socket.on('disconnect', () => {
