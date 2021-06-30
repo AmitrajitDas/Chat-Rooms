@@ -24,8 +24,8 @@ const App = () => {
         secondary: { main: '#303030' },
 
         action: {
-          selected: 'rgba(255, 255, 255, 0.16)',
-          hover: 'rgba(255, 255, 255, 0.08)',
+          selected: '#890596',
+          hover: '#52006A',
           disabled: 'rgba(255, 255, 255, 0.3)'
         }
       },
