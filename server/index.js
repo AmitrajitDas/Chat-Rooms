@@ -5,9 +5,14 @@ import http from 'http'
 import colors from 'colors'
 import dotenv from 'dotenv'
 
+import { addUser, removeUser, getUser, getUserFromRoom } from './config/users.js'
+import connectDB from './config/db.js'
+
 import homeRoute from './routes/homeRoute.js'
 
 dotenv.config()
+
+connectDB()
 
 const app = express()
 app.use(cors())
@@ -24,10 +29,12 @@ const io = new Server(httpServer, {
 
 io.on('connect', (socket) => {
 
-    console.log('New connection established'.bgGreen)
-
     socket.on('join', ({username, room}, callback) => {
-        console.log(username, room);
+        const { user, error } = addUser({ id: socket.id, username, room })
+
+        if(error) return callback(error)
+
+        socket.join(user.room)
     })
 
     socket.on('disconnect', () => {
