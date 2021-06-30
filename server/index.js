@@ -26,6 +26,10 @@ io.on('connect', (socket) => {
 
     console.log('New connection established'.bgGreen)
 
+    socket.on('join', ({username, room}, callback) => {
+        console.log(username, room);
+    })
+
     socket.on('disconnect', () => {
         console.log('User left'.bgRed)
     })
