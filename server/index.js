@@ -5,11 +5,26 @@ import http from 'http'
 import colors from 'colors'
 import dotenv from 'dotenv'
 
+import homeRoute from './routes/homeRoute.js'
+
 dotenv.config()
 
 const app = express()
 const httpServer = http.createServer(app)
 const io = new Server(httpServer)
+
+
+io.on('connection', (socket) => {
+
+    console.log('New connection established'.bgGreen)
+
+    socket.on('disconnect', () => {
+        console.log('User left'.bgRed)
+    })
+})
+
+
+app.use(homeRoute)
 
 const PORT = process.env.PORT || 5000
 
