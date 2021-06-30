@@ -11,7 +11,7 @@ const Home = () => {
 
   return (
     <Grid container className={classes.wrapper}>
-      <Grid item md={6} className={classes.intro}>
+      <Grid item xs={12} md={6} className={classes.intro}>
         <Typography className={classes.header} variant='h3'>
         Chat Rooms
         </Typography>
@@ -27,21 +27,10 @@ const Home = () => {
             color='primary'
             className={classes.registerButton}
           >
-           Register
-          </Button>
-        </Link>
-        <Link to='/login' style={{ textDecoration: 'none' }}>
-          <Button
-            type='submit'
-            variant='contained'
-            color='primary'
-            className={classes.loginButton}
-          >
-            Login
+           Try it out now!
           </Button>
         </Link>
       </Grid>
-
       <Grid item md={5}>
         <img src={Hero} className={classes.vector} />
       </Grid>
