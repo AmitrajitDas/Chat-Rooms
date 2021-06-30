@@ -5,7 +5,7 @@ export const addUser = ({id, username, room}) => {
     username = username.trim().toLowerCase()
     room = room.trim().toLowerCase()
 
-    const userExists = users.find(user => user.username === username || user.room === room)
+    const userExists = users.find(user => user.username === username && user.room === room)
 
     if(userExists){
         console.log('User already exists')
