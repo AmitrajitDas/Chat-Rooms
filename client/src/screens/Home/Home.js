@@ -20,21 +20,21 @@ const Home = () => {
           <br />
           <br />
         </Typography>
-        <Link to='/login' style={{ textDecoration: 'none' }}>
+        <Link to='/register' style={{ textDecoration: 'none' }}>
           <Button
-            type="submit"
-            variant="contained"
-            color="primary"
+            type='submit'
+            variant='contained'
+            color='primary'
             className={classes.registerButton}
           >
            Register
           </Button>
         </Link>
-        <Link to="/login" style={{ textDecoration: 'none' }}>
+        <Link to='/login' style={{ textDecoration: 'none' }}>
           <Button
-            type="submit"
-            variant="contained"
-            color="primary"
+            type='submit'
+            variant='contained'
+            color='primary'
             className={classes.loginButton}
           >
             Login

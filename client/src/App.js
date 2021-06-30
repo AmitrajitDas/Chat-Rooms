@@ -37,8 +37,8 @@ const App = () => {
     <>
     <MuiThemeProvider theme={theme}>
     <Paper>
-      <Navbar />
       <Router>
+          <Navbar />
           <Route path='/' exact component={Home} />
           <Route path='/join-chat' component={Join} />
           <Route path='/chat' component={Chat} />
