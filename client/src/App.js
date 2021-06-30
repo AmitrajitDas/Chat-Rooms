@@ -3,8 +3,8 @@ import { MuiThemeProvider, createMuiTheme, responsiveFontSizes, Container, Paper
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import Navbar from './components/Navbar/Navbar'
-import Join from './components/Join/Join'
-import Chat from './components/Chat/Chat'
+import Join from './screens/Join/JoinChatScreen'
+import Chat from './screens/Chat/ChatScreen'
 
 const App = () => {
 
