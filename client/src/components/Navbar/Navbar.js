@@ -18,7 +18,7 @@ const Navbar = () => {
         <AppBar position="static">
             <Toolbar>
             <Typography variant="h6" className={classes.title}>
-                Hello World
+                Chat Rooms
             </Typography>
             </Toolbar>
         </AppBar>
