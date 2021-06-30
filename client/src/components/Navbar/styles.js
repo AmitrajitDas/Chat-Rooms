@@ -14,4 +14,9 @@ export const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
     },
 
+    icon: {
+        width: '2.5rem',
+        height: '2.5rem'
+    },
+
 }));

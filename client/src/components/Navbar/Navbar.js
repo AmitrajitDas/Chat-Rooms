@@ -5,8 +5,7 @@ import {AppBar,
         Button,
         IconButton} from '@material-ui/core'
     
-import MenuIcon from '@material-ui/icons/Menu';
-
+import ChatRoomsIcon from '../../assets/chat.png'
 import { useStyles } from './styles'
 
 const Navbar = () => {
@@ -18,7 +17,7 @@ const Navbar = () => {
         <AppBar position="static">
             <Toolbar>
             <Typography variant="h6" className={classes.title}>
-                Chat Rooms
+                <img src={ChatRoomsIcon} className={classes.icon} />
             </Typography>
             </Toolbar>
         </AppBar>

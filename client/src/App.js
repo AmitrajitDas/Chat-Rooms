@@ -3,6 +3,7 @@ import { MuiThemeProvider, createMuiTheme, responsiveFontSizes, Container, Paper
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import Navbar from './components/Navbar/Navbar'
+import Home from './screens/Home/Home'
 import Join from './screens/Join/JoinChatScreen'
 import Chat from './screens/Chat/ChatScreen'
 
@@ -38,7 +39,8 @@ const App = () => {
     <Paper>
       <Navbar />
       <Router>
-          <Route path='/' exact component={Join} />
+          <Route path='/' exact component={Home} />
+          <Route path='/join-chat' component={Join} />
           <Route path='/chat' component={Chat} />
       </Router>
     </Paper>
