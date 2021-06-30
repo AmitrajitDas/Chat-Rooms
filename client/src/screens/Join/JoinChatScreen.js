@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import {Avatar, 
         Button, 
         CssBaseline, 
         TextField, 
         FormControlLabel, 
-        Link, 
         Checkbox, 
         Grid, 
         Typography, 
@@ -18,7 +18,7 @@ const Join = () => {
 
     const classes = useStyles()
 
-    const [name, setName] = useState('')
+    const [username, setUsername] = useState('')
     const [room, setRoom] = useState('')
 
     return (
@@ -38,11 +38,11 @@ const Join = () => {
             margin="normal"
             required
             fullWidth
-            id="name"
-            label="Name"
-            name="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            id="username"
+            label="Username"
+            name="username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
             InputLabelProps={{
             classes: {
               root: classes.cssLabel,
@@ -81,14 +81,20 @@ const Join = () => {
             }
             }}
           />
+          <Link
+          onClick={(e) => (!username || !room) ? e.preventDefault() : null}
+          to={`/chat?username=${username}&room=${room}`}
+          style={{ textDecoration: 'none'}}
+          >
           <Button
             type="submit"
             fullWidth
             variant="contained"
             className={classes.submit}
           >
-            Sign In
+            Join
           </Button>
+          </Link>
         </form>
       </div>
       </div>

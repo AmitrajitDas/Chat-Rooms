@@ -9,7 +9,7 @@ export const useStyles = makeStyles((theme) => ({
     
     paper: {
         marginTop: '5rem',
-        marginBottom: '12.3rem',
+        marginBottom: '12.6rem',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -37,9 +37,12 @@ export const useStyles = makeStyles((theme) => ({
     },
 
     submit: {
-        margin: theme.spacing(3, 0, 2),
         backgroundColor: theme.palette.action.selected,
         color: theme.typography.color.main,
+        padding: '0.6rem 2rem 0.6rem 2rem',
+        margin: '0.5rem 0 1rem 0',
+        borderRadius: '20px',
+        fontSize: '1rem',
         '&:hover': {
             backgroundColor: theme.palette.action.hover
         }
