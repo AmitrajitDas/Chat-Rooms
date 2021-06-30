@@ -30,14 +30,24 @@ const Navbar = () => {
                     </Typography>
                 </Grid>
                 <Grid item xs={1}>
+                    <Link to='/register' style={{ textDecoration: 'none' }}>                
                     <IconButton>
                         <PersonAddIcon />
+                        <Typography variant='body1'>
+                            Register
+                        </Typography>
                     </IconButton>
+                    </Link>
                 </Grid>
                 <Grid item xs={1}>
+                    <Link to='/login' style={{ textDecoration: 'none' }}>
                     <IconButton>
                         <AccountCircleIcon />
+                        <Typography variant='body1'>
+                            Login
+                        </Typography>
                     </IconButton>
+                    </Link>
                 </Grid>
             </Grid>
             </Toolbar>
