@@ -10,6 +10,11 @@ export const useStyles = makeStyles((theme) => ({
         marginRight: theme.spacing(2),
     },
 
+    avatar: {
+        backgroundColor: theme.palette.action.selected,
+        color: '#fff',
+    },
+
     title: {
         flexGrow: 1,
     },
@@ -17,6 +22,14 @@ export const useStyles = makeStyles((theme) => ({
     icon: {
         width: '2.5rem',
         height: '2.5rem'
+    },
+
+    logoutButton: {
+        marginTop: '2vh',
+        backgroundColor: theme.palette.action.selected,
+        '&:hover': {
+            backgroundColor: theme.palette.action.hover,
+        },
     },
 
 }));
