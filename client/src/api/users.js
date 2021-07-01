@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API = axios.create({ baseURL: `http://localhost:5000/api/auth` })
+const API = axios.create({ baseURL: 'https://chat-rooms-backend.herokuapp.com/api/auth' })
 
 const config = {
 
