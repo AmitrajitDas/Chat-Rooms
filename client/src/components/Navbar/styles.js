@@ -21,7 +21,7 @@ export const useStyles = makeStyles((theme) => ({
 
     icon: {
         width: '2.5rem',
-        height: '2.5rem'
+        height: '2.5rem',
     },
 
     logoutButton: {
