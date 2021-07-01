@@ -4,7 +4,7 @@ import { userLogin, userRegister } from '../controllers/userController.js'
 
 const router = express.Router()
 
-router.route('/signup').post(userRegister)
+router.route('/register').post(userRegister)
 router.route('/login').post(userLogin)
 
 

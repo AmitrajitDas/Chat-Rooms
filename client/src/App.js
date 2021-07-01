@@ -25,7 +25,7 @@ const App = () => {
       palette: {
         type: 'dark',
         primary: { main: '#424242', secondary: '#7eca9c'}, 
-        secondary: { main: '#303030' },
+        secondary: { main: '#890596' },
 
         action: {
           selected: '#890596',

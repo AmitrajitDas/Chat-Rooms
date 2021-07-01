@@ -15,7 +15,7 @@ export const userLogin = asyncHandler( async(req, res) => {
     if (user && (await user.matchPassword(password))) {
         res.json({
             _id: user._id,
-            name: user.name,
+            email: user.email,
             password: user.password,
             token: generateAuthToken(user._id)
         })
@@ -25,7 +25,7 @@ export const userLogin = asyncHandler( async(req, res) => {
 })
 
 // @desc Registering by creating a new user
-// @route POST /api/auth/signup
+// @route POST /api/auth/register
 // @access Public
 
 export const userRegister = asyncHandler( async(req, res) => {
@@ -49,6 +49,7 @@ export const userRegister = asyncHandler( async(req, res) => {
         res.status(201).json({
             _id: user._id,
             name: user.name,
+            email: user.email,
             password: user.password,
             token: generateAuthToken(user._id)
         })

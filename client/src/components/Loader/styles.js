@@ -9,4 +9,8 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
 
+  loaderColor: {
+    color: theme.palette.action.selected,
+  },
+
 }));

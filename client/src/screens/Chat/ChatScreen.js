@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import queryString from 'query-string'
 import io from 'socket.io-client'
+import dotenv from 'dotenv'
 
 import InfoBar from '../../components/InfoBar/InfoBar'
 import Input from '../../components/Input/Input'
 import Messages from '../../components/Messages/Messages'
 import { useStyles } from './styles'
+
+dotenv.config()
 
 let socket
 

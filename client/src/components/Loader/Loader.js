@@ -9,7 +9,7 @@ const Loader = () => {
 
     return (
         <div className={classes.loader}>
-            <LinearProgress color='primary' />
+            <LinearProgress color='secondary' />
         </div>
     )
 }
