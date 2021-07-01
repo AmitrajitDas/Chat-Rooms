@@ -30,7 +30,7 @@ const Join = () => {
           <TelegramIcon />
         </Avatar>
         <Typography variant="h4">
-          Join Chat
+          Join a Room
         </Typography>
         <form className={classes.form} noValidate>
           <TextField
@@ -39,7 +39,7 @@ const Join = () => {
             required
             fullWidth
             id="username"
-            label="Username"
+            placeholder="Username"
             name="username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
@@ -63,7 +63,7 @@ const Join = () => {
             required
             fullWidth
             name="room"
-            label="Room"
+            placeholder="Room"
             id="room"
             value={room}
             onChange={(e) => setRoom(e.target.value)}

@@ -31,22 +31,22 @@ const Navbar = () => {
                 </Grid>
                 <Grid item xs={1}>
                     <Link to='/register' style={{ textDecoration: 'none' }}>                
-                    <IconButton>
+                    <Button>
                         <PersonAddIcon />
-                        <Typography variant='body1'>
+                        <Typography variant='body2'>
                             Register
                         </Typography>
-                    </IconButton>
+                    </Button>
                     </Link>
                 </Grid>
                 <Grid item xs={1}>
                     <Link to='/login' style={{ textDecoration: 'none' }}>
-                    <IconButton>
+                    <Button>
                         <AccountCircleIcon />
-                        <Typography variant='body1'>
+                        <Typography variant='body2'>
                             Login
                         </Typography>
-                    </IconButton>
+                    </Button>
                     </Link>
                 </Grid>
             </Grid>
