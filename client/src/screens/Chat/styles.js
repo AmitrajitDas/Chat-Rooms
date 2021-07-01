@@ -33,6 +33,9 @@ export const useStyles = makeStyles((theme) => ({
         backgroundColor: '#424a44',
         backgroundImage: 'url("https://www.transparenttextures.com/patterns/food.png")',
         height: '25rem',
+        padding: '5% 0',
+        overflow: 'auto',
+        flex: 'auto',
     },
 
 }));
