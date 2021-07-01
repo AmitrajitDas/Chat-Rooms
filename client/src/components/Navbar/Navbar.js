@@ -4,7 +4,6 @@ import {AppBar,
         Toolbar,
         Typography,
         Button,
-        IconButton,
         Grid
         } from '@material-ui/core'
 import PersonAddIcon from '@material-ui/icons/PersonAdd'
@@ -25,7 +24,7 @@ const Navbar = () => {
                 <Grid item xs={10}>
                     <Typography variant="h6" className={classes.title}>
                         <Link to='/' style={{ textDecoration: 'none' }}>
-                            <img src={ChatRoomsIcon} className={classes.icon} />
+                            <img src={ChatRoomsIcon} className={classes.icon} alt='Chat Rooms Icon'/>
                         </Link>
                     </Typography>
                 </Grid>

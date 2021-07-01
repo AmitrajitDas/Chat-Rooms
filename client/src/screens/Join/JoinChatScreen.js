@@ -4,9 +4,6 @@ import {Avatar,
         Button, 
         CssBaseline, 
         TextField, 
-        FormControlLabel, 
-        Checkbox, 
-        Grid, 
         Typography, 
         Container } from '@material-ui/core'
 
@@ -39,6 +36,7 @@ const Join = () => {
             required
             fullWidth
             id="username"
+            type="username"
             placeholder="Username"
             name="username"
             value={username}

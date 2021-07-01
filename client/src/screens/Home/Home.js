@@ -1,13 +1,12 @@
-import { Button, Grid, Paper, Typography } from '@material-ui/core';
-import { useHistory, Link } from 'react-router-dom';
+import { Button, Grid, Typography } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 import Hero from '../../assets/join-chat-svg.svg'
 import { useStyles } from './styles';
 
 const Home = () => {
 
-  const classes = useStyles();
-  const history = useHistory();
+  const classes = useStyles()
 
   return (
     <Grid container className={classes.wrapper}>
@@ -32,7 +31,7 @@ const Home = () => {
         </Link>
       </Grid>
       <Grid item md={5}>
-        <img src={Hero} className={classes.vector} />
+        <img src={Hero} className={classes.vector} alt='hero'/>
       </Grid>
     </Grid>
 

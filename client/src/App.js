@@ -1,11 +1,14 @@
 import React from 'react'
-import { MuiThemeProvider, createMuiTheme, responsiveFontSizes, Container, Paper } from '@material-ui/core'
+import { MuiThemeProvider, createMuiTheme, responsiveFontSizes, Paper } from '@material-ui/core'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import Navbar from './components/Navbar/Navbar'
+
 import Home from './screens/Home/Home'
 import Join from './screens/Join/JoinChatScreen'
 import Chat from './screens/Chat/ChatScreen'
+import Login from './screens/Login/LoginScreen'
+import Register from './screens/Register/RegisterScreen'
 
 const App = () => {
 
@@ -42,6 +45,8 @@ const App = () => {
           <Route path='/' exact component={Home} />
           <Route path='/join-chat' component={Join} />
           <Route path='/chat' component={Chat} />
+          <Route path='/login' component={Login} />
+          <Route path='/register' component={Register} />
       </Router>
     </Paper>
     </MuiThemeProvider>

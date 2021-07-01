@@ -2,14 +2,12 @@ import React from 'react'
 import {AppBar,
         Toolbar,
         Typography,
-        Button,
         IconButton,
         Grid
         } from '@material-ui/core'
 
 import CloseIcon from '@material-ui/icons/Close'
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord'
-import OnlineIcon from '../../assets/onlineIcon.png'
 import { useStyles } from './styles'
 
 const InfoBar = ({ room }) => {
