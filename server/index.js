@@ -5,7 +5,7 @@ import http from 'http'
 import colors from 'colors'
 import dotenv from 'dotenv'
 
-import { addUser, removeUser, getUser, getUserFromRoom } from './config/users.js'
+import { addUser, removeUser, getUser, getUsersInRoom } from './config/users.js'
 import connectDB from './config/db.js'
 
 import homeRoute from './routes/homeRoute.js'
@@ -35,23 +35,30 @@ io.on('connect', (socket) => {
         if(error) return callback(error)
 
         socket.emit('message', { user: 'admin', text: `Hey ${user.username}, welcome to ${user.room}`})
-        socket.broadcast.to(user.room).emit('message', { user: 'admin', text: `{user.username} has joined!`})
+        socket.broadcast.to(user.room).emit('message', { user: 'admin', text: `${user.username} has joined!`})
 
         socket.join(user.room)
 
-        return callback()
+        io.to(user.room).emit('roomData', {room: user.room, users: getUsersInRoom(user.room)})
+
+        callback()
     })
 
     socket.on('sendMessage', (message, callback) => {
         const user = getUser(socket.id)
 
         io.to(user.room).emit('message', { user: user.username, text: message})
+        io.to(user.room).emit('roomData', { room: user.room, users: getUsersInRoom(user.room)})
 
         callback()
     })
 
     socket.on('disconnect', () => {
-        console.log('User left'.bgRed)
+        const user = removeUser(socket.id)
+
+        if(user){
+            io.to(user.room).emit('message', { user: 'admin', text: `${user.username} has left!`})
+        }
     })
 })
 
