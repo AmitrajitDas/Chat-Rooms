@@ -63,7 +63,9 @@ io.on('connect', (socket) => {
 })
 
 
-app.use(homeRoute)
+app.get('/', (req, res) => {
+    res.send('API is running...')
+})
 
 const PORT = process.env.PORT || 5000
 
