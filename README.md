@@ -2,6 +2,8 @@
 
 ## MERN chat application using socket.io
 
+> A Full stack chat app with user authentication system in which you can interact with other users in a specific room
+
 ![screenshot](https://github.com/AmitrajitDas/Chat-Rooms/blob/main/client/src/assets/screenshot.png)
 
 ## DEMO
