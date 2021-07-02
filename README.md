@@ -4,6 +4,10 @@
 
 ![screenshot](https://github.com/AmitrajitDas/Chat-Rooms/blob/main/client/src/assets/screenshot.png)
 
+## DEMO
+
+- See this app live:- https://keen-borg-173b95.netlify.app/
+
 ## Usage
 
 ### Install Dependencies
@@ -49,13 +53,5 @@ cd server/
 git add .
 git commit -m "your commit"
 git push heroku master
-
-```
-
-## DEMO
-
-- See this app live:- https://keen-borg-173b95.netlify.app/
-
-```
 
 ```
