@@ -21,14 +21,14 @@ npm i
 
 ### Run Locally
 
-# Run both frontend (Port: 3000) and backend (Port: 5000) simultaneously
+## Run both frontend (Port: 3000) and backend (Port: 5000) simultaneously
 
 ```
 cd server/
 npm run dev
 ```
 
-# Run both frontend (Port: 3000) and backend (Port: 5000) manually
+## Run both frontend (Port: 3000) and backend (Port: 5000) manually
 
 ```
 cd client/
