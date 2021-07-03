@@ -8,7 +8,7 @@
 
 ## DEMO
 
-- See this app live:- https://keen-borg-173b95.netlify.app/
+- See this app live:- https://chat-rooms-amitrajit.netlify.app/
 
 ## Usage
 
