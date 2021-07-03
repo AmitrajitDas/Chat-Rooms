@@ -205,7 +205,7 @@ const Register = ({ location, history }) => {
           <Grid container>
             <Grid item>
               <Link href={ redirect ? `/login?redirect=${redirect}` : '/login'} variant="body2" color='secondary'>
-                {"Don't have an account? Sign Up"}
+                {"Already registered? Sign In"}
               </Link>
             </Grid>
           </Grid>
