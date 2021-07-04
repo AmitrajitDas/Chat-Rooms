@@ -39,21 +39,3 @@ npm start
 cd ../server
 npm run server
 ```
-
-## Build & Deploy (client side)
-
-```
-cd client
-npm run build
-
-```
-
-## Build & Deploy (server side)
-
-```
-cd server/
-git add .
-git commit -m "your commit"
-git push heroku master
-
-```
